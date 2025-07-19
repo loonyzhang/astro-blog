@@ -16,7 +16,7 @@ html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #ff6b01;
-  --muted: #343f60;
+  --muted: #343f60bf;
   --border: #ab4b08;
 }
 
@@ -37,8 +37,16 @@ html[data-theme="dark"] {
   html {
     @apply overflow-y-scroll scroll-smooth;
   }
+  @font-face {
+    font-family: "ChineseFont";
+    src: local("PingFang SC"), local("Microsoft YaHei");
+    unicode-range: U+4E00-9FFF; /* 中文 Unicode 范围 */
+  }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background text-foreground selection:bg-accent/75 selection:text-background;
+    font-family:
+      ChineseFont, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
   }
   a,
   button {
