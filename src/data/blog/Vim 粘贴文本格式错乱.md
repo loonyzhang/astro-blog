@@ -4,6 +4,7 @@ description: 当从外部复制了多行文本粘贴进vim，缩进会错乱。
 pubDatetime: 2025-7-21 15:04:38
 tags:
   - Shell
+draft: false
 ---
 
 当从外部复制了多行文本粘贴进vim，缩进会错乱。
