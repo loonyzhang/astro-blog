@@ -1,34 +1,36 @@
 ---
-repo: loonyzhang/astro-blog
-media_path: /public/images
-website_url: https://xlabs.eu.org/
 collections:
-  - name: posts
-    git_path: /src/data/blog
+  - file_extension: .md
     filename_pattern: title
-    file_extension: .md
+    git_path: /src/data/blog
     metadata_schema:
       - name: title
+        required: true
         type: title
-        required: true
       - name: description
-        type: singleline
         required: true
+        type: singleline
       - name: draft
+        required: true
         type: boolean
-        required: true
       - name: pubDatetime
-        type: datetime
         required: true
-      - name: modDatetime
-        type: datetime
-        required: false
-      - name: tags
-        type: multi_select
-        required: true
-      - name: slug
         type: singleline
+      - name: modDatetime
         required: false
+        type: singleline
+      - name: tags
+        required: true
+        type: multi_select
+        allowed_values:
+          - Shell
+      - name: slug
+        required: false
+        type: singleline
+    name: posts
+media_path: /public/images
+repo: loonyzhang/astro-blog
+website_url: https://xlabs.eu.org/
 ---
 # GitCMS Configuration File
 > [!WARNING]
