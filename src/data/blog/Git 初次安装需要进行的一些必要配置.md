@@ -1,7 +1,7 @@
 ---
 title: Git 初次安装需要进行的一些必要配置
 description: 设置你的名字和邮件地址、格式化与多余的空白字符
-pubDatetime: 2025-07-19 16:58:18
+pubDatetime: 2025-07-19T08:58:18.000Z
 draft: false
 tags:
   - Git
