@@ -1,33 +1,28 @@
 ---
 collections:
-  - file_extension: .md
-    filename_pattern: title
+  - name: Posts
     git_path: /src/data/blog
+    filename_pattern: title
+    file_extension: .md
     metadata_schema:
       - name: title
-        required: true
         type: title
+        required: true
       - name: description
+        type: multiline
         required: true
-        type: singleline
-      - name: draft
-        required: true
-        type: boolean
       - name: pubDatetime
+        type: datetime
         required: true
-        type: singleline
       - name: modDatetime
+        type: datetime
         required: false
-        type: singleline
-      - name: tags
+      - name: draft
+        type: boolean
         required: true
+      - name: tags
         type: multi_select
-        allowed_values:
-          - Shell
-      - name: slug
         required: false
-        type: singleline
-    name: posts
 media_path: /public/images
 repo: loonyzhang/astro-blog
 website_url: https://xlabs.eu.org/
